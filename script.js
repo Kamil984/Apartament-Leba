@@ -81,3 +81,6 @@ function changeSlide(step) {
 }
 
 
+
+
+
