@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apartament West Łeba</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @keyframes appear{
+      from{
+        opacity: 0;
+        scale: 0,5;
+      }
+      to{
+        opacity: 1;
+        scale: 1;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div id="intro">
+  <div class="intro-content">
+    <h1>Apartament</h1>
+    <h6>West Łeba</h6>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+</div>
+ <nav>
+  <div class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">O nas</a></li>
+      <li><a href="#location">Lokalizacja</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+      <li><a href="#gallery">Galeria</a></li>
+      <li><a href="#facilities">Wyposażenie</a></li>
+    </ul>
+  </div>
+</nav>
+  <header id="home" class="hero">
+    <div class="hero-text">
+      <h1>Apartament</h1>
+      <h1>West Łeba</h1>
+      <p>Nowoczesny apartament nad morzem w sercu Łeby</p>
+      <a href="#contact" class="btn">Zarezerwuj teraz</a>
+    </div>
+  </header>
+  <section class="info-boxes">
+<section class="info-section">
+  <div class="info-box box1">
+    <i class="fas fa-clock"></i>
+    <h3>Godziny zameldowania</h3>
+    <p>14:00 - 22:00</p>
+  </div>
+  <div class="info-box box2">
+    <i class="fas fa-home"></i>
+    <h3>Łeba</h3>
+    <p>Wspólna 30B</p>
+  </div>
+  <div class="info-box box3">
+    <i class="fas fa-headset"></i>
+    <h3>Kontakt telefoniczny</h3>
+    <p>+48 660 420 441</p>
+  </div>
+</section>
+
+</section>
+  <section id="gallery" class="gallery-section">
+  <div class="gallery-title">
+    <h6>Apartament</h6>
+    <h5>GALERIA</h5 >
+  </div>
+  <div class="gallery-grid">
+    <img src="img/1.png" onclick="openLightbox(0)">
+    <img src="img/2.png" onclick="openLightbox(1)">
+    <img src="img/3.png" onclick="openLightbox(2)">
+    <img src="img/4.png" onclick="openLightbox(3)">
+    <img src="img/5.png" onclick="openLightbox(4)">
+    <img src="img/6.png" onclick="openLightbox(5)">
+    <img src="img/7.png" onclick="openLightbox(6)">
+    <img src="img/8.png" onclick="openLightbox(7)">
+    <img src="img/9.png" onclick="openLightbox(8)">
+    <img src="img/10.png" onclick="openLightbox(9)">
+    <img src="img/11.png" onclick="openLightbox(10)">
+    <img src="img/12.png" onclick="openLightbox(11)">
+    <img src="img/13.png" onclick="openLightbox(12)">
+    <img src="img/14.png" onclick="openLightbox(13)">
+    <img src="img/15.png" onclick="openLightbox(14)">
+    <img src="img/16.png" onclick="openLightbox(15)">
+    <img src="img/17.png" onclick="openLightbox(16)">
+    <img src="img/18.png" onclick="openLightbox(17)">
+  </div>
+  
+  <section class="info-boxes">
+  <section id="about">
+  <h4>O obiekcie</h4>
+  <p class="about-text">
+    Apartament West to przestronny, komfortowy lokal położony w spokojnej części Łeby. 
+    Goście mogą liczyć na pełne wyposażenie, nowoczesny wystrój i bliskość atrakcji turystycznych. <br>
+    Idealne miejsce na rodzinny wypoczynek i romantyczny wyjazd.
+  </p>
+</section>
+  <section id="location">
+  <h4>Lokalizacja</h4>
+  <p class="info-text">📍 Wspólna 30B B19, 84-360 Łeba</p>
+  <p class="info-text">🚶 3 min do PKP • 🚶 10 min do oceanarium • 🚶 18 min do plaży</p>
+  <a href="https://www.google.com/maps?q=Wspólna+30B+B19,+Łeba" target="_blank" class="btn-map">Zobacz na mapie</a>
+</section>
+
+<section id="contact">
+  <h4>Kontakt</h4>
+  <p class="info-text">
+    Rezerwuj pobyt przez telefon 
+    <a href="tel:660-420-441">660-420-441</a> 
+    lub skontaktuj się mailowo: 
+    <a href="mailto:Agnieszka.sobotka80@wp.pl">Agnieszka.sobotka80@wp.pl</a>
+  </p>
+</section>
+
+  <section id="facilities">
+  <h4>Wyposażenie</h4>
+  <div class="grid-4col">
+
+    <div>
+      <h3>🧩 Udogodnienia:</h3>
+      <ul>
+        <li>📶 Wi-Fi</li>
+        <li>📺 Telewizor</li>
+        <li>🅿️ Bezpłatny prywatny parking</li>
+        <li>🚶‍♂️ 1,8 km do plaży</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>🍽️ Wyposażenie kuchni:</h3>
+      <ul>
+        <li>🍴 Kuchenka mikrofalowa</li>
+        <li>🔥 Grill elektryczny</li>
+        <li>🟣 Płyta indukcyjna</li>
+        <li>☕ Ekspres do kawy</li>
+        <li>💧 Czajnik</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>🛁 Wyposażenie łazienki:</h3>
+      <ul>
+        <li>🧺 Pralka</li>
+        <li>💨 Suszarka do włosów</li>
+        <li>🚿 Kabina prysznicowa</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>ℹ️ Informacje dodatkowe</h3>
+      <ul>
+        <li>🛋️ Dwie rozkładane sofy – maks. dla 4 osób</li>
+        <li>🏝️ Akcesoria na plażę:</li>
+        <li>🏖️ Parawan</li>
+        <li>🪑 2 leżaki</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+</section>
+<footer>
+    <p>&copy; 2025 Apartament West Łeba – Wszelkie prawa zastrzeżone</p>
+  </footer>
+  <script src="script.js"></script>
+  <div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="">
+  <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+  <span class="next" onclick="changeSlide(1)">&#10095;</span>
+</div>
+
+</div>
+</body>
+</html>
