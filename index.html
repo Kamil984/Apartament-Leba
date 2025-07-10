@@ -60,7 +60,7 @@
       method="POST"
       style="display: none; flex: 1; background-color: rgba(255,255,255,0.1); padding: 1rem; margin-left: 400px;">
   <input type="hidden" name="_subject" value="Nowa rezerwacja ze strony!">
-  <input type="hidden" name="_next" value="https://kamil984.github.io/Apartament-Leba/#success">
+  <input type="hidden" name="_next" value="https://kamil984.github.io/Apartament-Leba/">
   <div class="form-row" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
     <input type="date" name="data_od" required />
     <input type="date" name="data_do" required />
@@ -214,56 +214,14 @@
 <footer>
     <p>&copy; 2025 Apartament West Łeba – Wszelkie prawa zastrzeżone</p>
   </footer>
- <div id="lightbox" class="lightbox">
+  <script src="script.js"></script>
+  <div id="lightbox" class="lightbox">
   <span class="close" onclick="closeLightbox()">&times;</span>
   <img id="lightbox-img" src="">
   <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
   <span class="next" onclick="changeSlide(1)">&#10095;</span>
 </div>
 
-<script>
-  // Smooth scroll do sekcji
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      const target = document.getElementById(targetId);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
-
-  // Animacja intro
-  window.addEventListener("load", () => {
-    const intro = document.getElementById("intro");
-    const heroText = document.querySelector(".hero-text");
-
-    setTimeout(() => {
-      intro.classList.add("hide");
-      heroText.classList.add("animate-side");
-    }, 1100);
-  });
-
-  // Obsługa formularza i komunikatu
-  document.addEventListener("DOMContentLoaded", () => {
-    const calendarBtn = document.querySelector('a[href="#calendar-section"]');
-    const calendarBox = document.getElementById("calendar-box");
-    const thankYouMsg = document.getElementById("thank-you-msg");
-
-    // Pokazanie/ukrycie formularza
-    if (calendarBtn && calendarBox) {
-      calendarBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        calendarBox.style.display = calendarBox.style.display === "none" ? "block" : "none";
-      });
-    }
-
-    // Pokazanie komunikatu po wysłaniu wiadomości
-    if (window.location.hash === "#success" && thankYouMsg) {
-      thankYouMsg.style.display = "block";
-    }
-  });
-</script>
+</div>
 </body>
 </html>
