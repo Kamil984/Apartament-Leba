@@ -24,8 +24,8 @@
 <body>
   <div id="intro">
   <div class="intro-content">
-    <h1>Apartament</h1>
-    <h6>West Łeba</h6>
+    <h1><i>Apartament</i></h1>
+    <h6><i>West Łeba</i></h6>
     <div class="loader-bar">
       <div class="loader-progress"></div>
     </div>
@@ -44,19 +44,42 @@
   </div>
 </nav>
   <header id="home" class="hero">
-    <div class="hero-text">
-      <h1>Apartament</h1>
-      <h1>West Łeba</h1>
-      <p>Nowoczesny apartament nad morzem w sercu Łeby</p>
-      <a href="#contact" class="btn">Zarezerwuj teraz</a>
-    </div>
+    <div class="hero-text" style="display: flex; flex-direction: row; gap: 2rem;">
+      <div style="flex: 1;">
+  <h1><i>Apartament</i></h1>
+  <h1><i>West Łeba</i></h1>
+  <p>Nowoczesny apartament nad morzem w sercu Łeby</p>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+    <a href="#contact" class="btn">Zarezerwuj teraz</a>
+    <a href="#calendar-section" class="btn">Sprawdź terminy</a>
+  </div>
+</div>
+
+<form id="calendar-box" class="form-box"
+      action="https://formsubmit.co/apartamentwestleba@gmail.com"
+      method="POST"
+      style="display: none; flex: 1; background-color: rgba(255,255,255,0.1); padding: 1rem; margin-left: 400px;">
+
+  <input type="hidden" name="_subject" value="Nowa rezerwacja ze strony!">
+
+  <div class="form-row" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+    <input type="date" name="data_od" required />
+    <input type="date" name="data_do" required />
+  </div>
+
+  <label for="wiadomosc">Napisz wiadomość, np. liczba osób lub pytania</label>
+  <textarea name="wiadomosc" placeholder="Napisz wiadomość..." required style="width: 100%; height: 100px; margin-bottom: 1rem;"></textarea>
+
+  <button type="submit" style="display: block; margin: 0 auto;">Wyślij zapytanie</button>
+</form>
+
   </header>
   <section class="info-boxes">
 <section class="info-section">
   <div class="info-box box1">
     <i class="fas fa-clock"></i>
     <h3>Godziny zameldowania</h3>
-    <p>14:00 - 22:00</p>
+    <p>Do ustalenia</p>
   </div>
   <div class="info-box box2">
     <i class="fas fa-home"></i>
@@ -95,6 +118,13 @@
     <img src="img/16.png" onclick="openLightbox(15)">
     <img src="img/17.png" onclick="openLightbox(16)">
     <img src="img/18.png" onclick="openLightbox(17)">
+    <img src="img/19.png" onclick="openLightbox(18)">
+    <img src="img/20.png" onclick="openLightbox(19)">
+    <img src="img/21.png" onclick="openLightbox(20)">
+    <img src="img/22.png" onclick="openLightbox(21)">
+    <img src="img/23.png" onclick="openLightbox(22)">
+    <img src="img/24.png" onclick="openLightbox(23)">
+
   </div>
   
   <section class="info-boxes">
@@ -104,6 +134,9 @@
     Apartament West to przestronny, komfortowy lokal położony w spokojnej części Łeby. 
     Goście mogą liczyć na pełne wyposażenie, nowoczesny wystrój i bliskość atrakcji turystycznych. <br>
     Idealne miejsce na rodzinny wypoczynek i romantyczny wyjazd.
+    W mieszkaniu znajduje się duża lodówka o standardowych wymiarach.
+    Dodatkowo do dyspozycji najemcy są pełne akcesoria kuchenne, w tym: komplet sztućców, talerze, szklanki, kieliszki, miski oraz inne niezbędne wyposażenie do gotowania i spożywania posiłków.
+    Dla osób dbających o formę lub lubiących aktywność fizyczną, w mieszkaniu dostępny jest również rowerek stacjonarny.
   </p>
 </section>
   <section id="location">
@@ -116,10 +149,10 @@
 <section id="contact">
   <h4>Kontakt</h4>
   <p class="info-text">
-    Rezerwuj pobyt przez telefon 
-    <a href="tel:660-420-441">660-420-441</a> 
+    Numer kontaktowy:
+    <a href="tel: +48 660-420-441">+48 660-420-441</a> 
     lub skontaktuj się mailowo: 
-    <a href="mailto:Agnieszka.sobotka80@wp.pl">Agnieszka.sobotka80@wp.pl</a>
+    <a href="mailto:apartamentwestleba@gmail.com">apartamentwestleba@gmail.com</a>
   </p>
 </section>
 
@@ -128,43 +161,47 @@
   <div class="grid-4col">
 
     <div>
-      <h3>🧩 Udogodnienia:</h3>
+      <h3> Udogodnienia:</h3>
       <ul>
-        <li>📶 Wi-Fi</li>
-        <li>📺 Telewizor</li>
-        <li>🅿️ Bezpłatny prywatny parking</li>
-        <li>🚶‍♂️ 1,8 km do plaży</li>
-        <li>👕 Żelazko</li>
+        <li> Wi-Fi</li>
+        <li> Telewizor</li>
+        <li> Bezpłatny prywatny parking</li>
+        <li> 1,8 km do plaży</li>
+        <li> Żelazko</li>
+        <li> Rowerek stacjonarny</li>
       </ul>
     </div>
 
     <div>
-      <h3>🍽️ Wyposażenie kuchni:</h3>
+      <h3> Wyposażenie kuchni:</h3>
       <ul>
-        <li>👨‍🍳 Kuchenka mikrofalowa</li>
-        <li>🔥 Grill elektryczny</li>
-        <li>🟣 Płyta indukcyjna</li>
-        <li>☕ Ekspres do kawy</li>
-        <li>💧 Czajnik</li>
+        <li> Kuchenka mikrofalowa</li>
+        <li> Grill elektryczny</li>
+        <li> Płyta indukcyjna</li>
+        <li> Ekspres do kawy</li>
+        <li> Czajnik</li>
+        <li> Lodówka</li>
+        <li> Zmywarka</li>
       </ul>
     </div>
 
     <div>
-      <h3>🛁 Wyposażenie łazienki:</h3>
+      <h3> Wyposażenie łazienki:</h3>
       <ul>
-        <li>🧺 Pralka</li>
-        <li>💨 Suszarka do włosów</li>
-        <li>🚿 Kabina prysznicowa</li>
+        <li> Pralka</li>
+        <li> Suszarka do włosów</li>
+        <li> Kabina prysznicowa</li>
+        <li> Ręczniki</li>
       </ul>
     </div>
 
     <div>
-      <h3>ℹ️ Informacje dodatkowe</h3>
+      <h3> Informacje dodatkowe</h3>
       <ul>
-        <li>🛋️ Dwie rozkładane sofy – maks. dla 4 osób</li>
-        <li>🏝️ Akcesoria na plażę:</li>
-        <li>🏖️ Parawan</li>
-        <li>🪑 2 leżaki</li>
+        <li> Dwie rozkładane sofy – maks. dla 4 osób</li>
+        <li> Akcesoria na plażę:</li>
+        <li> Parawan</li>
+        <li> 2 leżaki</li>
       </ul>
     </div>
 
