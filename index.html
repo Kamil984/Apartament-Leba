@@ -221,6 +221,49 @@
   <span class="next" onclick="changeSlide(1)">&#10095;</span>
 </div>
 
-<script src="script.js"></script>
+script>
+  // Smooth scroll do sekcji
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+
+  // Animacja intro
+  window.addEventListener("load", () => {
+    const intro = document.getElementById("intro");
+    const heroText = document.querySelector(".hero-text");
+
+    setTimeout(() => {
+      intro.classList.add("hide");
+      heroText.classList.add("animate-side");
+    }, 1100);
+  });
+
+  // Obsługa formularza i komunikatu
+  document.addEventListener("DOMContentLoaded", () => {
+    const calendarBtn = document.querySelector('a[href="#calendar-section"]');
+    const calendarBox = document.getElementById("calendar-box");
+    const thankYouMsg = document.getElementById("thank-you-msg");
+
+    // Pokazanie/ukrycie formularza
+    if (calendarBtn && calendarBox) {
+      calendarBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        calendarBox.style.display = calendarBox.style.display === "none" ? "block" : "none";
+      });
+    }
+
+    // Pokazanie komunikatu po wysłaniu wiadomości
+    if (window.location.hash === "#success" && thankYouMsg) {
+      thankYouMsg.style.display = "block";
+    }
+  });
+</script>
 </body>
 </html>
