@@ -118,6 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
     thankYouMsg.style.display = "block";
     setTimeout(() => {
       thankYouMsg.style.display = "none";
-    }, 5000); // Zniknie po 5 sekundach
+    }, 5000); 
   }
 });
