@@ -492,26 +492,18 @@ form-box {
 }
 
 .thank-you {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 1.5rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  color: #333;
-  max-width: 400px;
+  background-color: rgba(255,255,255,0.9);
+  padding: 2rem;
+  max-width: 500px;
   margin: 2rem auto;
+  border-radius: 1rem;
   text-align: center;
-  font-size: 1.1rem;
-  font-weight: 500;
-  animation: fadeIn 0.8s ease forwards;
+  font-size: 1.2rem;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease forwards;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hidden {
+  display: none;
 }
