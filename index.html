@@ -227,7 +227,17 @@
   <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
   <span class="next" onclick="changeSlide(1)">&#10095;</span>
 </div>
-
+<div id="success" style="display: none; text-align: center; background-color: #d4edda; color: #155724; padding: 1rem; margin: 2rem auto; max-width: 600px; border-radius: 10px; font-weight: bold;">
+  Dziękujemy! Skontaktujemy się po odebraniu wiadomości.
 </div>
+
+<script>
+  if (window.location.hash === "#success") {
+    document.getElementById("success").style.display = "block";
+    const form = document.getElementById("calendar-box");
+    if (form) form.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 </body>
 </html>
