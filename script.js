@@ -96,16 +96,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("calendar-box");
-  const thankYouMsg = document.getElementById("thank-you-msg");
-
-  if (form && thankYouMsg) {
-    form.addEventListener("submit", () => {
-      setTimeout(() => {
-        thankYouMsg.style.display = "block";
-        form.reset(); 
-      }, 1000); 
-    });
-  }
-});
