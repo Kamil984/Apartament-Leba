@@ -82,7 +82,7 @@ function changeSlide(step) {
   currentIndex += step;
   if (currentIndex < 0) currentIndex = images.length - 1;
   if (currentIndex >= images.length) currentIndex = 0;
-  document.getElementById("lightbox-img").src = images[currentIndex];
+  document.getElementById("lightbox-img").src = images[currentIndex]; 
 }
 
 document.addEventListener("DOMContentLoaded", () => {
