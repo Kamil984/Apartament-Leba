@@ -361,8 +361,8 @@ p{
 }
 
 .grid-4col ul {
-  list-style: none;
-  padding-left: 0;
+  list-style: disc;
+  padding-left: 1.5em;
 }
 
 .grid-4col ul li {
@@ -433,3 +433,60 @@ p{
 .lightbox .prev { left: 30px; }
 .lightbox .next { right: 30px; }
 
+form-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.form-box input[type="date"],
+.form-box textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+.form-box textarea {
+  min-height: 100px;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+.form-box p {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-box button {
+  display: block;
+  margin: 0 auto;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-box button:hover {
+  background-color: #125ea9;
+}
