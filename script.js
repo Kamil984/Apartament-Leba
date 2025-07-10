@@ -100,24 +100,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("calendar-box");
   const thankYouMsg = document.getElementById("thank-you-msg");
 
-  // Obsługa formularza (lokalnie – nie działa przy _next)
   if (form && thankYouMsg) {
     form.addEventListener("submit", () => {
       setTimeout(() => {
         thankYouMsg.style.display = "block";
-        form.reset();
-        setTimeout(() => {
-          thankYouMsg.style.display = "none";
-        }, 5000); // Zniknie po 5 sekundach
-      }, 1000); // Pokaż po 1 sekundzie
+        form.reset(); 
+      }, 1000); 
     });
   }
-
-  // Obsługa po przekierowaniu z formsubmit (_next)
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const thankYouMsg = document.getElementById("thank-you-msg");
   if (window.location.href.includes("#home") && thankYouMsg) {
     thankYouMsg.style.display = "block";
-    setTimeout(() => {
-      thankYouMsg.style.display = "none";
-    }, 5000); 
   }
 });
