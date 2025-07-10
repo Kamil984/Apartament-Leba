@@ -109,3 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const thankYouMsg = document.getElementById("thank-you-msg");
+  if (window.location.href.includes("#home") && thankYouMsg) {
+    thankYouMsg.style.display = "block";
+  }
+});
