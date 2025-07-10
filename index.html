@@ -60,32 +60,26 @@
       method="POST"
       style="display: none; flex: 1; background-color: rgba(255,255,255,0.1); padding: 1rem; margin-left: 400px;">
 
-  <!-- Ustawienia formsubmit -->
   <input type="hidden" name="_subject" value="Nowa rezerwacja ze strony!">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_next" value="https://apartamentwestleba.github.io#success">
 
-  <!-- Imię i nazwisko -->
   <div class="form-row">
     <input type="text" name="Imię i nazwisko" placeholder="Imię i nazwisko" required />
   </div>
 
-  <!-- Numer telefonu -->
   <div class="form-row">
     <input type="tel" name="Numer telefonu" placeholder="Numer telefonu" required />
   </div>
 
-  <!-- Daty rezerwacji -->
   <div class="form-row">
     <input type="date" name="Data od" required />
     <input type="date" name="Data do" required />
   </div>
 
-  <!-- Wiadomość -->
   <label for="wiadomosc">Napisz wiadomość, np. liczba osób lub pytania</label>
   <textarea name="Wiadomość" placeholder="Napisz wiadomość..." required></textarea>
 
-  <!-- Przycisk -->
   <button type="submit">Wyślij zapytanie</button>
 </form>
   </header>
