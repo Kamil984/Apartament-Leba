@@ -1,227 +1,117 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apartament West Łeba</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    @keyframes appear{
-      from{
-        opacity: 0;
-        scale: 0,5;
-      }
-      to{
-        opacity: 1;
-        scale: 1;
-      }
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href").substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
     }
-  </style>
+  });
+});
 
-</head>
-<body>
-  <div id="intro">
-  <div class="intro-content">
-    <h1><i>Apartament</i></h1>
-    <h6><i>West Łeba</i></h6>
-    <div class="loader-bar">
-      <div class="loader-progress"></div>
-    </div>
-  </div>
-</div>
- <nav>
-  <div class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">O nas</a></li>
-      <li><a href="#location">Lokalizacja</a></li>
-      <li><a href="#contact">Kontakt</a></li>
-      <li><a href="#gallery">Galeria</a></li>
-      <li><a href="#facilities">Wyposażenie</a></li>
-    </ul>
-  </div>
-</nav>
-  <header id="home" class="hero">
-    <div class="hero-text" style="display: flex; flex-direction: row; gap: 2rem;">
-      <div style="flex: 1;">
-  <h1><i>Apartament</i></h1>
-  <h1><i>West Łeba</i></h1>
-  <p>Nowoczesny apartament nad morzem w sercu Łeby</p>
-  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-    <a href="#contact" class="btn">Zarezerwuj teraz</a>
-    <a href="#calendar-section" class="btn">Sprawdź terminy</a>
-  </div>
-</div>
+window.addEventListener("load", () => {
+  const hero = document.querySelector(".hero-text");
+  if (hero) {
+    setTimeout(() => {
+      hero.classList.add("animate-side");
+    }, 1125);
+  }
+});
 
-<form id="calendar-box" class="form-box"
-      action="https://formsubmit.co/apartamentwestleba@gmail.com"
-      method="POST"
-      style="display: none; flex: 1; background-color: rgba(255,255,255,0.1); padding: 1rem; margin-left: 400px;">
-  <input type="hidden" name="_subject" value="Nowa rezerwacja ze strony!">
-  <input type="hidden" name="_next" value="https://kamil984.github.io/Apartament-Leba/">
-  <div class="form-row" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-    <input type="date" name="data_od" required />
-    <input type="date" name="data_do" required />
-  </div>
+window.addEventListener("load", () => {
+  const intro = document.getElementById("intro");
+  const heroText = document.querySelector(".hero-text");
 
-  <label for="wiadomosc">Napisz wiadomość, np. liczba osób lub pytania</label>
-  <textarea name="wiadomosc" placeholder="Napisz wiadomość..." required style="width: 100%; height: 100px; margin-bottom: 1rem;"></textarea>
+  setTimeout(() => {
+    intro.classList.add("hide");
+    heroText.classList.add("animate-side");
+  }, 1100);
+});
+function openLightbox(imgElement) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightboxImg.src = imgElement.src;
+  lightbox.style.display = "flex";
+}
 
-  <button type="submit" style="display: block; margin: 0 auto;">Wyślij zapytanie</button>
-</form>
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
 
-<p id="thank-you-msg" style="display:none; text-align:center; font-weight:bold; color:aliceblue;border-radius: 20px; margin-top:1rem;">
-  Dziękujemy! Odezwiemy się po odebraniu wiadomości.
-</p>
+const images = [
+  "img/1.png",
+  "img/2.png",
+  "img/3.png",
+  "img/4.png",
+  "img/5.png",
+  "img/6.png",
+  "img/7.png",
+  "img/8.png",
+  "img/9.png",
+  "img/10.png",
+  "img/11.png",
+  "img/12.png",
+  "img/13.png",
+  "img/14.png",
+  "img/15.png",
+  "img/16.png",
+  "img/17.png",
+  "img/18.png",
+  "img/19.png",
+  "img/20.png",
+  "img/21.png",
+  "img/22.png",
+  "img/23.png",
+  "img/24.png"
 
-  </header>
-  <section class="info-boxes">
-<section class="info-section">
-  <div class="info-box box1">
-    <i class="fas fa-clock"></i>
-    <h3>Godziny zameldowania</h3>
-    <p>Do ustalenia</p>
-  </div>
-  <div class="info-box box2">
-    <i class="fas fa-home"></i>
-    <h3>Łeba</h3>
-    <p>Wspólna 30B</p>
-  </div>
-  <div class="info-box box3">
-    <i class="fas fa-headset"></i>
-    <h3>Kontakt telefoniczny</h3>
-    <p>+48 660 420 441</p>
-  </div>
-</section>
-
-</section>
-  <section id="gallery" class="gallery-section">
-  <div class="gallery-title">
-    <h6>Apartament</h6>
-    <h5>GALERIA</h5 >
-  </div>
-  <div class="gallery-grid">
-    <img src="img/1.png" onclick="openLightbox(0)">
-    <img src="img/2.png" onclick="openLightbox(1)">
-    <img src="img/3.png" onclick="openLightbox(2)">
-    <img src="img/4.png" onclick="openLightbox(3)">
-    <img src="img/5.png" onclick="openLightbox(4)">
-    <img src="img/6.png" onclick="openLightbox(5)">
-    <img src="img/7.png" onclick="openLightbox(6)">
-    <img src="img/8.png" onclick="openLightbox(7)">
-    <img src="img/9.png" onclick="openLightbox(8)">
-    <img src="img/10.png" onclick="openLightbox(9)">
-    <img src="img/11.png" onclick="openLightbox(10)">
-    <img src="img/12.png" onclick="openLightbox(11)">
-    <img src="img/13.png" onclick="openLightbox(12)">
-    <img src="img/14.png" onclick="openLightbox(13)">
-    <img src="img/15.png" onclick="openLightbox(14)">
-    <img src="img/16.png" onclick="openLightbox(15)">
-    <img src="img/17.png" onclick="openLightbox(16)">
-    <img src="img/18.png" onclick="openLightbox(17)">
-    <img src="img/19.png" onclick="openLightbox(18)">
-    <img src="img/20.png" onclick="openLightbox(19)">
-    <img src="img/21.png" onclick="openLightbox(20)">
-    <img src="img/22.png" onclick="openLightbox(21)">
-    <img src="img/23.png" onclick="openLightbox(22)">
-    <img src="img/24.png" onclick="openLightbox(23)">
-
-  </div>
   
-  <section class="info-boxes">
-  <section id="about">
-  <h4>O obiekcie</h4>
-  <p class="about-text">
-    Apartament West to przestronny, komfortowy lokal położony w spokojnej części Łeby. 
-    Goście mogą liczyć na pełne wyposażenie, nowoczesny wystrój i bliskość atrakcji turystycznych. <br>
-    Idealne miejsce na rodzinny wypoczynek i romantyczny wyjazd.
-    W mieszkaniu znajduje się duża lodówka o standardowych wymiarach.
-    Dodatkowo do dyspozycji najemcy są pełne akcesoria kuchenne, w tym: komplet sztućców, talerze, szklanki, kieliszki, miski oraz inne niezbędne wyposażenie do gotowania i spożywania posiłków.
-    Dla osób dbających o formę lub lubiących aktywność fizyczną, w mieszkaniu dostępny jest również rowerek stacjonarny.
-  </p>
-</section>
-  <section id="location">
-  <h4>Lokalizacja</h4>
-  <p class="info-text">📍 Wspólna 30B B19, 84-360 Łeba</p>
-  <p class="info-text">🚶 3 min do Dworca PKP • 🚶 10 min do oceanarium • 🚶 18 min do plaży</p>
-  <a href="https://www.google.com/maps?q=Wspólna+30B+B19,+Łeba" target="_blank" class="btn-map">Zobacz na mapie</a>
-</section>
+];
+let currentIndex = 0;
 
-<section id="contact">
-  <h4>Kontakt</h4>
-  <p class="info-text">
-    Numer kontaktowy:
-    <a href="tel: +48 660-420-441">+48 660-420-441</a> 
-    lub skontaktuj się mailowo: 
-    <a href="mailto:apartamentwestleba@gmail.com">apartamentwestleba@gmail.com</a>
-  </p>
-</section>
+function openLightbox(index) {
+  currentIndex = index;
+  document.getElementById("lightbox-img").src = images[index];
+  document.getElementById("lightbox").style.display = "flex";
+}
 
-  <section id="facilities">
-  <h4>Wyposażenie</h4>
-  <div class="grid-4col">
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
 
-    <div>
-      <h3> Udogodnienia:</h3>
-      <ul>
-        <li> Wi-Fi</li>
-        <li> Telewizor</li>
-        <li> Bezpłatny prywatny parking</li>
-        <li> 1,8 km do plaży</li>
-        <li> Żelazko</li>
-        <li> Rowerek stacjonarny</li>
-      </ul>
-    </div>
+function changeSlide(step) {
+  currentIndex += step;
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+  document.getElementById("lightbox-img").src = images[currentIndex];
+}
 
-    <div>
-      <h3> Wyposażenie kuchni:</h3>
-      <ul>
-        <li> Kuchenka mikrofalowa</li>
-        <li> Grill elektryczny</li>
-        <li> Płyta indukcyjna</li>
-        <li> Ekspres do kawy</li>
-        <li> Czajnik</li>
-        <li> Lodówka</li>
-        <li> Zmywarka</li>
-      </ul>
-    </div>
+document.addEventListener("DOMContentLoaded", () => {
+  const calendarBtn = document.querySelector('a[href="#calendar-section"]');
+  const calendarBox = document.getElementById("calendar-box");
 
-    <div>
-      <h3> Wyposażenie łazienki:</h3>
-      <ul>
-        <li> Pralka</li>
-        <li> Suszarka do włosów</li>
-        <li> Kabina prysznicowa</li>
-        <li> Ręczniki</li>
-      </ul>
-    </div>
+  if (calendarBtn && calendarBox) {
+    calendarBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      calendarBox.style.display = calendarBox.style.display === "none" ? "block" : "none";
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("calendar-box");
+  const thankYouMsg = document.getElementById("thank-you-msg");
 
-    <div>
-      <h3> Informacje dodatkowe</h3>
-      <ul>
-        <li> Dwie rozkładane sofy – maks. dla 4 osób</li>
-        <li> Akcesoria na plażę:</li>
-        <li> Parawan</li>
-        <li> 2 leżaki</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-</section>
-<footer>
-    <p>&copy; 2025 Apartament West Łeba – Wszelkie prawa zastrzeżone</p>
-  </footer>
-  <script src="script.js"></script>
-  <div id="lightbox" class="lightbox">
-  <span class="close" onclick="closeLightbox()">&times;</span>
-  <img id="lightbox-img" src="">
-  <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
-  <span class="next" onclick="changeSlide(1)">&#10095;</span>
-</div>
-
-</div>
-</body>
-</html>
+  if (form && thankYouMsg) {
+    form.addEventListener("submit", () => {
+      setTimeout(() => {
+        thankYouMsg.style.display = "block";
+        form.reset(); 
+      }, 1000); 
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const thankYouMsg = document.getElementById("thank-you-msg");
+  if (window.location.href.includes("#home") && thankYouMsg) {
+    thankYouMsg.style.display = "block";
+  }
+});
