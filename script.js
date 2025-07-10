@@ -102,6 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
  if (window.location.hash === "#success" && thankYouMsg) {
   thankYouMsg.style.display = "block";
 }
-
   }
 });
+if (window.location.search.includes("success=1") && thankYouMsg) {
+  thankYouMsg.style.display = "block";
+  setTimeout(() => {
+    thankYouMsg.style.display = "none";
+    window.history.replaceState(null, null, window.location.pathname); // usuwa ?success=1 z URL
+  }, 5000); // znika po 5 sekundach
+}
