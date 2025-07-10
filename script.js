@@ -96,12 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const thankYouMsg = document.getElementById("thank-you-msg");
 
-  if (window.location.hash === "#success" && thankYouMsg) {
-    thankYouMsg.classList.remove("hidden");
-  }
-});
 
 
