@@ -96,3 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const thankYouMsg = document.getElementById("thank-you-msg");
+
+  // Jeśli URL zawiera ?success — pokazujemy podziękowanie
+  if (window.location.search.includes("success") && thankYouMsg) {
+    thankYouMsg.style.display = "block";
+  }
+});
