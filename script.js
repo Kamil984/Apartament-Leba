@@ -1,4 +1,3 @@
-// Płynne przewijanie do sekcji
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -23,7 +22,6 @@ window.addEventListener("load", () => {
   const intro = document.getElementById("intro");
   const heroText = document.querySelector(".hero-text");
 
-  // Po 2.2 sek – chowamy intro i pokazujemy animację tekstu
   setTimeout(() => {
     intro.classList.add("hide");
     heroText.classList.add("animate-side");
@@ -58,7 +56,14 @@ const images = [
   "img/15.png",
   "img/16.png",
   "img/17.png",
-  "img/18.png"
+  "img/18.png",
+  "img/19.png",
+  "img/20.png",
+  "img/21.png",
+  "img/22.png",
+  "img/23.png",
+  "img/24.png"
+
   
 ];
 let currentIndex = 0;
@@ -80,7 +85,15 @@ function changeSlide(step) {
   document.getElementById("lightbox-img").src = images[currentIndex];
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const calendarBtn = document.querySelector('a[href="#calendar-section"]');
+  const calendarBox = document.getElementById("calendar-box");
 
-
-
+  if (calendarBtn && calendarBox) {
+    calendarBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      calendarBox.style.display = calendarBox.style.display === "none" ? "block" : "none";
+    });
+  }
+});
 
