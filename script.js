@@ -8,7 +8,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-
 window.addEventListener("load", () => {
   const hero = document.querySelector(".hero-text");
   if (hero) {
