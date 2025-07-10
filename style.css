@@ -490,3 +490,17 @@ form-box {
 .form-box button:hover {
   background-color: #125ea9;
 }
+
+#thank-you-msg {
+  background-color: rgba(255, 255, 255, 0.9); 
+  border: 2px solid white;                  
+  padding: 1rem;                            
+  border-radius: 10px;                       
+  max-width: 400px;                        
+  margin: 1rem auto;                         
+  text-align: center;                        
+  font-weight: bold;
+  color: green;
+  display: none;                             
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);   
+}
