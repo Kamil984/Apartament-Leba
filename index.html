@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- POPRAWIONE keyframes 'appear' -->
   <style>
     @keyframes appear {
       from { opacity: 0; transform: scale(0.5); }
@@ -18,7 +17,7 @@
 </head>
 
 <body>
-  <!-- INTRO OVERLAY -->
+  
   <div id="intro">
     <div class="intro-content">
       <h1><i>Apartament</i></h1>
@@ -78,15 +77,12 @@
     </div>
   </header>
 
-  <!-- ... (reszta Twojego HTML bez zmian) ... -->
-
   <footer>
     <p>&copy; 2025 Apartament West Łeba – Wszelkie prawa zastrzeżone</p>
   </footer>
 
   <script src="script.js"></script>
 
-  <!-- LIGHTBOX -->
   <div id="lightbox" class="lightbox">
     <span class="close" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" src="">
@@ -94,19 +90,16 @@
     <span class="next" onclick="changeSlide(1)">&#10095;</span>
   </div>
 
-  <!-- Sukces po wysłaniu -->
   <div id="success" style="display:none; text-align:center; background-color:#d4edda; color:#155724; padding:1rem; margin:2rem auto; max-width:600px; border-radius:10px; font-weight:bold;">
     Dziękujemy! Skontaktujemy się po odebraniu wiadomości.
   </div>
 
-  <!-- ✅ DODANE: schowaj intro po załadowaniu -->
   <script>
     window.addEventListener('load', () => {
       const intro = document.getElementById('intro');
       if (intro) intro.classList.add('hide');
     });
 
-    /* Twoja obsługa #success zostaje bez zmian */
     if (window.location.hash === "#success") {
       document.getElementById("success").style.display = "block";
       const form = document.getElementById("calendar-box");
