@@ -10,7 +10,6 @@ body {
   line-height: 1.6;
 }
 
-/* NAV */
 nav {
   position: fixed;
   top: 0;
@@ -34,12 +33,11 @@ nav {
 nav .logo { font-weight: 700; color: #0d47a1; font-size: 1.2rem; }
 nav .menu a { margin-left: 1rem; text-decoration: none; color: #1976d2; font-weight: 500; }
 
-/* HERO — poprawione */
 .hero {
-  min-height: 100vh;              /* możesz dodać 100svh dla mobile */
+  min-height: 100vh;        
   display: flex;
   align-items: center;
-  justify-content: flex-start;     /* zamiast 'left' */
+  justify-content: flex-start;    
   text-align: left;
   color: #fff;
 
@@ -53,7 +51,7 @@ nav .menu a { margin-left: 1rem; text-decoration: none; color: #1976d2; font-wei
 
 .hero-text {
   font-family: "Montserrat", Sans-serif;
-  font-size: 35px;                 /* bez spacji */
+  font-size: 35px;                
   font-weight: 150;
   padding: 20px;
   border-radius: 10px;
@@ -83,7 +81,6 @@ nav .menu a { margin-left: 1rem; text-decoration: none; color: #1976d2; font-wei
   font-weight: bold;
 }
 
-/* SEKCJE */
 h2 { color: #0d47a1; margin-bottom: 1rem; }
 .btn-map {
   display: inline-block;
@@ -102,7 +99,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* GALLERY — poprawione tło, usunięte podwójne ; i shorthand */
 .gallery-section {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -141,7 +137,6 @@ footer {
 }
 .gallery-grid img:hover { transform: scale(1.02); }
 
-/* INFO BOXES */
 .info-section {
   display:flex;
   flex-wrap: wrap;
@@ -193,7 +188,6 @@ p{ font-family: "Montserrat", Sans-serif; text-align: center; }
 #contact a { color: #ffb347; text-decoration: none; }
 #contact a:hover { color: #ffd700; text-decoration: underline; }
 
-/* Animacje — poprawione */
 @keyframes slideFadeIn {
   from { opacity: 0; transform: translateX(-50px); }
   to   { opacity: 1; transform: translateX(0); }
@@ -205,7 +199,6 @@ p{ font-family: "Montserrat", Sans-serif; text-align: center; }
   to   { opacity: 1; transform: scale(1); }
 }
 
-/* INTRO OVERLAY */
 #intro {
   position: fixed;
   top: 0; left: 0;
@@ -240,7 +233,6 @@ p{ font-family: "Montserrat", Sans-serif; text-align: center; }
 }
 @keyframes loading { 0%{width:0%} 100%{width:100%} }
 
-/* FORM BOX — brakowało kropki przed klasą */
 .form-box {
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(6px);
@@ -268,7 +260,6 @@ p{ font-family: "Montserrat", Sans-serif; text-align: center; }
 }
 .form-box button:hover { background-color: #125ea9; }
 
-/* Teksty sekcji */
 #facilities { padding: 2rem; color: white; }
 .grid-4col {
   display: grid;
