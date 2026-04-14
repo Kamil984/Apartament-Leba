@@ -1,0 +1,83 @@
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href").substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+window.addEventListener("load", () => {
+  const hero = document.querySelector(".hero-text");
+  if (hero) {
+    setTimeout(() => {
+      hero.classList.add("animate-side");
+    }, 1125);
+  }
+});
+
+window.addEventListener("load", () => {
+  const intro = document.getElementById("intro");
+  const heroText = document.querySelector(".hero-text");
+
+  setTimeout(() => {
+    intro.classList.add("hide");
+    heroText.classList.add("animate-side");
+  }, 1100);
+});
+function openLightbox(imgElement) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightboxImg.src = imgElement.src;
+  lightbox.style.display = "flex";
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+const images = [
+  "img/1.png",
+  "img/2.png",
+  "img/3.png",
+  "img/4.png",
+  "img/5.png",
+  "img/6.png",
+  "img/7.png",
+  "img/8.png",
+  "img/9.png",
+  "img/10.png",
+
+  
+];
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = index;
+  document.getElementById("lightbox-img").src = images[index];
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+function changeSlide(step) {
+  currentIndex += step;
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+  document.getElementById("lightbox-img").src = images[currentIndex]; 
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const calendarBtn = document.querySelector('a[href="#calendar-section"]');
+  const calendarBox = document.getElementById("calendar-box");
+
+  if (calendarBtn && calendarBox) {
+    calendarBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      calendarBox.style.display = calendarBox.style.display === "none" ? "block" : "none";
+    });
+  }
+});
